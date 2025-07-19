@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {children}
             </div>
             <div className="hidden lg:w-[500px] lg:relative lg:flex lg:flex-col lg:justify-center">
-                <Image className="absolute top-1/2 translate-y-[-50%] right-0" src='/authImg.png' alt="auth" width={450} height={450} />
+                <Image className="absolute top-1/2 translate-y-[-50%] right-0" src='/authImg2.svg' alt="auth" width={450} height={450} />
             </div>
         </div>
     </div>

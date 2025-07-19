@@ -20,7 +20,7 @@ export default function Workflow3 () {
         try {
             setResponse('sdfdsfsdf')
         } catch(err) {
-
+            console.log(err)
         } finally {
             setIsLoading(false)
         }
@@ -83,7 +83,7 @@ export default function Workflow3 () {
           toast("copié dans le presse-papiers")
           setCopy(true)
         } catch (err) {
-          toast("Échec de la copie")
+          toast(`Échec de la copie ${err}`)
           // Un autre fallback ou gestion d'erreur spécifique
           setCopy(false)
         }

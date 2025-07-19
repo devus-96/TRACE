@@ -19,7 +19,7 @@ export default function AuthWelcome () {
             </Link>
             <div className='w-fit flex items-center mt-4'>
                 <p className="mr-1">Already have an account ? </p>
-                <Link href='/auth/login' className="text-secondary">Let's login</Link>
+                <Link href='/auth/login' className="text-secondary">Let&apos;s login</Link>
             </div>
         </section>
     )

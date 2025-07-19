@@ -33,11 +33,14 @@ export default function WorkflowPage1 () {
         setIsLoading(true);
         setErrorMessage(null);
         try {
-            
-        } catch (error: any) {
+            console.log(data)
+        } catch (error: unknown) {
             console.error("Erreur lors de la création de l'utilisateur :", error);
-            setErrorMessage(error.message || "Une erreur inattendue est survenue.");
+            if (error instanceof Error) {
+                setErrorMessage(error?.message || "Une erreur inattendue est survenue.");
+            }
         } finally {
+            console.log(errorMessage)
             setIsLoading(false);
         }
     };

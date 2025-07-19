@@ -1,0 +1,14 @@
+"use client"
+import React from "react"
+
+export function BadgeColor ({
+    color
+}:{
+    color: string
+}) {
+    return (
+        <svg width="7" height="18" viewBox="0 0 7 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.00195312 0H2.00195C4.76338 0 7.00195 2.23858 7.00195 5V13C7.00195 15.7614 4.76338 18 2.00195 18H0.00195312V0Z" fill={color} fillOpacity="0.9"/>
+        </svg>
+    )
+}

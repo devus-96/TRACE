@@ -38,12 +38,15 @@ export default function SignupPage () {
         setIsLoading(true);
         setErrorMessage(null);
         try {
-            
-        } catch (error: any) {
+            console.log(data)
+        } catch (error: unknown) {
             console.error("Erreur lors de la création de l'utilisateur :", error);
-            setErrorMessage(error.message || "Une erreur inattendue est survenue.");
+            if (error instanceof Error) {
+                setErrorMessage(error?.message || "Une erreur inattendue est survenue.");
+            }
         } finally {
             setIsLoading(false);
+            console.log(errorMessage)
         }
     };
 
@@ -123,7 +126,7 @@ export default function SignupPage () {
             </form>
             <div className='w-fit flex items-center mt-4'>
                 <p className="mr-1">Already have an account ? </p>
-                <Link href='/auth/login' className="text-secondary">Let's login</Link>
+                <Link href='/auth/login' className="text-secondary">Let&apos;s login</Link>
             </div>
         </section>
     );
